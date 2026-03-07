@@ -2,14 +2,13 @@ import { css } from 'lit';
 
 /**
  * The Kinetic Pop aesthetic applied to the ButtonBase HTML structure.
- * Uses fallback values in case the global CSS variables aren't loaded yet.
+ * Updated to match the latest Style Dictionary token names.
  */
 export const styles = css`
   :host {
     display: inline-block;
   }
 
-  /* The "part" selector allows us to style the internal <button> or <a> tag */
   [part="base"] {
     appearance: none;
     border: none;
@@ -21,16 +20,14 @@ export const styles = css`
     justify-content: center;
     gap: 0.5rem;
 
-    /* Kinetic Pop Geometry & Typography */
-    font-family: var(--font-heading, 'Bricolage Grotesque', sans-serif);
+    font-family: var(--font-family-heading, 'Bricolage Grotesque', sans-serif);
     padding: 0.9rem 1.8rem;
     border: var(--border-width, 3px) solid var(--color-border, #111111);
     border-radius: var(--border-radius-interactive, 16px 4px 16px 4px);
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: var(--font-weight-bold, 700);
+    font-size: var(--font-size-base, 1rem);
     cursor: pointer;
 
-    /* Kinetic Pop Physics */
     transition: all var(--motion-fast, 0.15s) var(--motion-spring, cubic-bezier(0.34, 1.56, 0.64, 1));
   }
 

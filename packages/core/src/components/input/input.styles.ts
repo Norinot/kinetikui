@@ -13,7 +13,6 @@ export const styles = css`
   }
 
   [part="label"] {
-    /* Fixed variable names to match Style Dictionary output */
     font-family: var(--font-family-heading, 'Bricolage Grotesque', sans-serif);
     font-weight: var(--font-weight-bold, 700);
     font-size: var(--font-size-sm, 0.875rem);
@@ -40,12 +39,11 @@ export const styles = css`
   [part="input"]:focus {
     outline: none;
     transform: translate(-2px, -2px);
-    /* Now using the accent variables we added to the JSON */
     box-shadow: 6px 6px 0px var(--accent-main, #4f46e5);
     border-color: var(--accent-main, #4f46e5);
   }
 
-  /* State: Error - ideally add a 'danger' token to color.json later */
+  /* State: Error - ideally add a 'danger' token to color.json later? */
   :host([error]) [part="input"] {
     border-color: #ff3333;
     box-shadow: 4px 4px 0px #ff3333;

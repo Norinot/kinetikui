@@ -4,7 +4,6 @@ import { property } from 'lit/decorators.js';
 /**
  * Headless Base Class for all Button-like elements.
  * Handles DOM rendering (button vs anchor), a11y, and standard properties.
- * Contains ZERO styling.
  */
 export class ButtonBase extends LitElement {
   // Common interactive properties
