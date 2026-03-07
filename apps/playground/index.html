@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KinetikUI Playground</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <h1>KinetikUI Playground</h1>
+
+    <div class="component-demo">
+      <kp-button variant="primary">Primary Action</kp-button>
+      <kp-button variant="secondary">Secondary</kp-button>
+      <kp-button disabled>Disabled</kp-button>
+    </div>
+
+    <div style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem;">
+      <kp-text variant="heading-1" as="h1">Kinetic Pop Typography</kp-text>
+      <kp-text variant="heading-3" as="h3" color="accent">Hard Shadows. Spring Physics.</kp-text>
+      <kp-text variant="body" as="p">This text is inheriting the Inter font from your style.css!</kp-text>
+    </div>
+
+    <div style="margin-top: 3rem; max-width: 400px; display: flex; flex-direction: column; gap: 1.5rem;">
+      <kp-input label="Username" placeholder="Enter your handle"></kp-input>
+      <kp-input label="Email Address" type="email" value="hello@kinetik.ui" disabled></kp-input>
+      <kp-input label="Password" type="password" error="Password must contain a symbol"></kp-input>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

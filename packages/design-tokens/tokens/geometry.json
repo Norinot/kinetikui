@@ -1,0 +1,10 @@
+{
+  "border": {
+    "width": { "value": "3px" },
+    "radius": {
+      "interactive": { "value": "16px 4px 16px 4px" },
+      "small": { "value": "6px 12px 6px 12px" },
+      "container": { "value": "24px 8px 24px 8px" }
+    }
+  }
+}

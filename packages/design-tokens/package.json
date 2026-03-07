@@ -1,0 +1,11 @@
+{
+  "name": "@kinetik/design-tokens",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "style-dictionary build"
+  },
+  "dependencies": {
+    "style-dictionary": "^4.0.0"
+  }
+}

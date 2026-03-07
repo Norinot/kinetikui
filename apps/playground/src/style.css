@@ -1,0 +1,36 @@
+body {
+  font-family: var(--font-family-body, "Plus Jakarta Sans", sans-serif);
+  background-color: var(--color-bg, #f4f0eb);
+  color: var(--color-text-main, #111111);
+  padding: 3rem;
+
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+[data-theme="dark"] body {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.05) 2px,
+    transparent 2px
+  );
+}
+
+h1 {
+  font-family: var(--font-family-heading, "Bricolage Grotesque", sans-serif);
+  font-weight: var(--font-weight-black, 800);
+  margin-bottom: 3rem;
+  font-size: var(--font-size-4xl, 3rem);
+  letter-spacing: var(--font-letter-spacing-tight, -0.03em);
+  color: var(--color-text-main, #111111);
+}
+
+.component-demo {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.02);
+  border: 2px dashed var(--color-border, #111111);
+  border-radius: var(--border-radius-container, 24px 8px 24px 8px);
+}

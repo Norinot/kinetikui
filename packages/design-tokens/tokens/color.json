@@ -1,0 +1,29 @@
+{
+  "color": {
+    "hue": { "value": "243" },
+    "sat": { "value": "75%" },
+    "lit": { "value": "59%" },
+    "bg": { "value": "#f4f0eb" },
+    "surface": { "value": "#ffffff" },
+    "border": { "value": "#111111" },
+    "text": {
+      "main": { "value": "#111111" },
+      "muted": { "value": "#555555" }
+    }
+  },
+  "accent": {
+    "main": {
+      "value": "hsl(var(--color-hue), var(--color-sat), var(--color-lit))"
+    },
+    "hover": {
+      "value": "hsl(var(--color-hue), var(--color-sat), calc(var(--color-lit) - 10%))"
+    },
+    "shift-1": {
+      "value": "hsl(calc(var(--color-hue) + 320), var(--color-sat), var(--color-lit))"
+    },
+    "shift-2": {
+      "value": "hsl(calc(var(--color-hue) + 150), var(--color-sat), var(--color-lit))"
+    },
+    "shift-3": { "value": "hsl(calc(var(--color-hue) + 60), 90%, 65%)" }
+  }
+}
