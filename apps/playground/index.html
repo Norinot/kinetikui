@@ -34,6 +34,31 @@
       <kp-input label="Email Address" type="email" value="hello@kinetik.ui" disabled></kp-input>
       <kp-input label="Password" type="password" error="Password must contain a symbol"></kp-input>
     </div>
+
+    <div style="margin-top: 3rem; max-width: 400px; display: flex; flex-direction: column; gap: 1.5rem; padding: 2rem;">
+
+      <kp-textarea label="Bio" placeholder="Tell us about your Kinetic aesthetic..." rows="2">
+      </kp-textarea>
+
+      <kp-textarea label="API Token (Read Only)" value="kp_live_8f7d6s5a4" disabled>
+      </kp-textarea>
+
+      <kp-textarea label="Feedback" error="Please provide more than 10 characters." value="Too short" resize="vertical">
+      </kp-textarea>
+
+    </div>
+
+    <div style="margin-top: 3rem; max-width: 400px; display: flex; flex-direction: column; gap: 1.5rem; padding: 2rem;">
+      <kp-card>
+        Some text
+
+        <kp-textarea label="Feedback" error="Please provide more than 10 characters." value="Too short" resize="vertical">
+      </kp-textarea>
+      <kp-input label="Password" type="password" error="Password must contain a symbol"></kp-input>
+      <kp-button variant="secondary">Secondary</kp-button>
+
+      </kp-card>
+    </div>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>

@@ -2,7 +2,6 @@ import { css } from 'lit';
 
 /**
  * The Kinetic Pop aesthetic applied to the ButtonBase HTML structure.
- * Updated to match the latest Style Dictionary token names.
  */
 export const styles = css`
   :host {
@@ -21,22 +20,21 @@ export const styles = css`
     gap: 0.5rem;
 
     font-family: var(--font-family-heading, 'Bricolage Grotesque', sans-serif);
+    font-weight: var(--font-weight-bold, 700);
+    font-size: var(--font-size-base, 1rem);
+    line-height: var(--font-line-height-snug, 1.3);
+    letter-spacing: var(--font-letter-spacing-tight, -0.03em);
     padding: 0.9rem 1.8rem;
     border: var(--border-width, 3px) solid var(--color-border, #111111);
     border-radius: var(--border-radius-interactive, 16px 4px 16px 4px);
-    font-weight: var(--font-weight-bold, 700);
-    font-size: var(--font-size-base, 1rem);
     cursor: pointer;
-
+    
     transition: all var(--motion-fast, 0.15s) var(--motion-spring, cubic-bezier(0.34, 1.56, 0.64, 1));
   }
 
-  /* =========================================
-     VARIANT: PRIMARY
-     ========================================= */
   :host([variant="primary"]) [part="base"] {
     background: var(--accent-main, #4f46e5);
-    color: #ffffff;
+    color: var(--color-surface, #ffffff);
     box-shadow: 4px 4px 0px var(--color-border, #111111);
     text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
   }
@@ -52,9 +50,7 @@ export const styles = css`
     box-shadow: 2px 2px 0px var(--color-border, #111111);
   }
 
-  /* =========================================
-     VARIANT: SECONDARY
-     ========================================= */
+
   :host([variant="secondary"]) [part="base"] {
     background: var(--color-surface, #ffffff);
     color: var(--color-text-main, #111111);
@@ -72,9 +68,7 @@ export const styles = css`
     box-shadow: 2px 2px 0px var(--color-border, #111111);
   }
 
-  /* =========================================
-     STATE: DISABLED
-     ========================================= */
+
   :host([disabled]) {
     opacity: 0.6;
     cursor: not-allowed;
