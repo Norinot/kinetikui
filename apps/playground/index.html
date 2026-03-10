@@ -5,71 +5,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KinetikUI Playground</title>
+
+  <!-- Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+
+  <style>
+    :root {
+      --playground-max-width: 1400px;
+      --section-gap: 3rem;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: #0f1115;
+      color: white;
+    }
+
+    #app {
+      max-width: var(--playground-max-width);
+      margin: 0 auto;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--section-gap);
+    }
+
+    h1 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 2.2rem;
+      margin: 0;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.6;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .demo-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-container);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
+
     <h1>KinetikUI Playground</h1>
 
-    <div class="component-demo">
-      <kp-button variant="primary">Primary Action</kp-button>
-      <kp-button variant="secondary">Secondary</kp-button>
-      <kp-button disabled>Disabled</kp-button>
-    </div>
+    <!-- BUTTONS -->
+    <section class="section">
+      <div class="section-title">Buttons</div>
 
-    <div style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem;">
-      <kp-text variant="heading-1" as="h1">Kinetic Pop Typography</kp-text>
-      <kp-text variant="heading-3" as="h3" color="accent">Hard Shadows. Spring Physics.</kp-text>
-      <kp-text variant="body" as="p">This text is inheriting the Inter font from your style.css!</kp-text>
-    </div>
+      <div class="demo-card">
+        <div class="row">
+          <kp-button variant="primary">Primary</kp-button>
+          <kp-button variant="secondary">Secondary</kp-button>
+          <kp-button disabled>Disabled</kp-button>
+        </div>
+      </div>
+    </section>
 
-    <div style="margin-top: 3rem; max-width: 400px; display: flex; flex-direction: column; gap: 1.5rem;">
-      <kp-input label="Username" placeholder="Enter your handle"></kp-input>
-      <kp-input label="Email Address" type="email" value="hello@kinetik.ui" disabled></kp-input>
-      <kp-input label="Password" type="password" error="Password must contain a symbol"></kp-input>
-    </div>
+    <!-- TYPOGRAPHY -->
+    <section class="section">
+      <div class="section-title">Typography</div>
 
-    <div style="margin-top: 3rem; max-width: 400px; display: flex; flex-direction: column; gap: 1.5rem; padding: 2rem;">
+      <div class="demo-card">
+        <kp-text variant="heading-1" as="h1">
+          Kinetic Pop Typography
+        </kp-text>
 
-      <kp-textarea label="Bio" placeholder="Tell us about your Kinetic aesthetic..." rows="2">
-      </kp-textarea>
+        <kp-text variant="heading-3" as="h3" color="accent">
+          Hard Shadows. Spring Physics.
+        </kp-text>
 
-      <kp-textarea label="API Token (Read Only)" value="kp_live_8f7d6s5a4" disabled>
-      </kp-textarea>
+        <kp-text variant="body" as="p">
+          This text inherits the Inter font.
+        </kp-text>
+      </div>
+    </section>
 
-      <kp-textarea label="Feedback" error="Please provide more than 10 characters." value="Too short" resize="vertical">
-      </kp-textarea>
+    <!-- INPUTS -->
+    <section class="section">
+      <div class="section-title">Inputs</div>
 
-    </div>
+      <div class="grid grid-3">
+        <div class="demo-card">
+          <kp-input label="Username" placeholder="Enter your handle"></kp-input>
+        </div>
 
-    <div style="margin-top: 3rem; max-width: 400px; display: flex; flex-direction: column; gap: 1.5rem; padding: 2rem;">
-      <kp-card>
-        Some text
+        <div class="demo-card">
+          <kp-input label="Email" type="email" value="hello@kinetik.ui" disabled></kp-input>
+        </div>
 
-        <kp-textarea label="Feedback" error="Please provide more than 10 characters." value="Too short"
-          resize="vertical">
-        </kp-textarea>
-        <kp-input label="Password" type="password" error="Password must contain a symbol"></kp-input>
-        <kp-button variant="secondary">Secondary</kp-button>
+        <div class="demo-card">
+          <kp-input label="Password" type="password" error="Password must contain a symbol"></kp-input>
+        </div>
+      </div>
+    </section>
 
-        <kp-button variant="secondary">
-          <kp-icon><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-              fill="#e3e3e3">
-              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-            </svg></kp-icon>
-        </kp-button>
+    <!-- TEXTAREAS -->
+    <section class="section">
+      <div class="section-title">Textareas</div>
 
+      <div class="grid grid-3">
+        <div class="demo-card">
+          <kp-textarea label="Bio" placeholder="Tell us about your Kinetic aesthetic..." rows="2"></kp-textarea>
+        </div>
 
-        <kp-checkbox>Checkbox</kp-checkbox>
-      </kp-card>
-    </div>
+        <div class="demo-card">
+          <kp-textarea label="API Token" value="kp_live_8f7d6s5a4" disabled></kp-textarea>
+        </div>
+
+        <div class="demo-card">
+          <kp-textarea label="Feedback" error="Please provide more than 10 characters." value="Too short"
+            resize="vertical">
+          </kp-textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPOSITION -->
+    <section class="section">
+      <div class="section-title">Composition</div>
+
+      <div class="grid grid-3">
+
+        <kp-card class="demo-card">
+          Some text
+
+          <kp-textarea label="Feedback" error="Please provide more than 10 characters." value="Too short"></kp-textarea>
+
+          <kp-input label="Password" type="password" error="Password must contain a symbol"></kp-input>
+
+          <div class="row">
+            <kp-button variant="secondary">Secondary</kp-button>
+
+            <kp-button variant="secondary">
+              <kp-icon>
+                <svg viewBox="0 -960 960 960" width="24" height="24">
+                  <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+              </kp-icon>
+            </kp-button>
+          </div>
+
+          <kp-checkbox>Checkbox</kp-checkbox>
+        </kp-card>
+
+        <kp-card class="demo-card">
+          <kp-popover>
+            <kp-button slot="trigger" variant="secondary">Click Me!</kp-button>
+            <div>
+              <h3>Surprise!</h3>
+              <p>I automatically dodge screen edges.</p>
+            </div>
+          </kp-popover>
+        </kp-card>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Standalone Select</div>
+
+      <div class="demo-card">
+        <kp-select value="apple">
+          <kp-option value="apple">Apple</kp-option>
+          <kp-option value="banana">Banana</kp-option>
+          <kp-option value="cherry">Cherry</kp-option>
+        </kp-select>
+      </div>
+    </section>
+
   </div>
+
   <script type="module" src="/src/main.ts"></script>
 </body>
 
