@@ -26,5 +26,11 @@
         "comment": "Size of small interactive controls (checkbox, radio, switch knob)."
       }
     }
+  },
+  "z-index": {
+    "popover": {
+      "value": "100",
+      "comment": "Z-index for floating popovers to ensure they sit above standard page content."
+    }
   }
 }
