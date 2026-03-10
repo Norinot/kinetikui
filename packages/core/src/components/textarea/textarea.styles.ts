@@ -42,7 +42,7 @@ export const textareaStyles = css`
 
     background-color: var(--color-surface);
     border: var(--border-width) solid var(--color-border);
-    border-radius: var(--border-radius-small);
+    border-radius: var(--radius-small);
     box-shadow: 4px 4px 0px var(--color-border);
     outline: none;
 

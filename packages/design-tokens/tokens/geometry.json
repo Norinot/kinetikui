@@ -1,10 +1,30 @@
 {
   "border": {
-    "width": { "value": "3px" },
-    "radius": {
-      "interactive": { "value": "16px 4px 16px 4px" },
-      "small": { "value": "6px 12px 6px 12px" },
-      "container": { "value": "24px 8px 24px 8px" }
+    "width": {
+      "value": "3px",
+      "comment": "Primary border thickness for the Kinetic Pop aesthetic."
+    },
+    "focus": {
+      "width": { "value": "3px" },
+      "offset": {
+        "value": "5px",
+        "comment": "The distance the focus ring sits away from the component."
+      }
+    }
+  },
+
+  "radius": {
+    "interactive": { "value": "16px 4px 16px 4px" },
+    "small": { "value": "6px 12px 6px 12px" },
+    "container": { "value": "24px 8px 24px 8px" }
+  },
+
+  "size": {
+    "control": {
+      "sm": {
+        "value": "1.5rem",
+        "comment": "Size of small interactive controls (checkbox, radio, switch knob)."
+      }
     }
   }
 }

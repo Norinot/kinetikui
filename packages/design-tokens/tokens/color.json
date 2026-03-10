@@ -9,6 +9,10 @@
     "text": {
       "main": { "value": "#111111" },
       "muted": { "value": "#555555" }
+    },
+    "focus": {
+      "value": "{accent.shift-1}",
+      "comment": "The high visibility pink used for focused states to ensure ne-brutalist contrast"
     }
   },
   "accent": {

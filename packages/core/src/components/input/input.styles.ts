@@ -30,7 +30,7 @@ export const styles = css`
     background: var(--color-surface, #ffffff);
     
     border: var(--border-width, 3px) solid var(--color-border, #111111);
-    border-radius: var(--border-radius-small, 6px 12px 6px 12px);
+    border-radius: var(--radius-small, 6px 12px 6px 12px);
     box-shadow: 4px 4px 0px var(--color-border, #111111);
     
     transition: all var(--motion-fast, 0.15s) var(--motion-spring, cubic-bezier(0.34, 1.56, 0.64, 1));
